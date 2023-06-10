@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="form-container">
       <b-form-group id="input-group-1" label="Title:" label-for="input-1">
         <b-form-input
           id="input-1"
@@ -38,13 +38,15 @@
         <b-form-input
           id="input-4"
           v-model="form.imgUrl"
-          placeholder="Enter an url for the cover image"
+          placeholder="Enter a URL for the cover image"
           type="url"
         ></b-form-input>
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+      <div class="buttons-container">
+        <b-button type="submit" variant="primary">Submit</b-button>
+        <b-button type="reset" variant="danger">Reset</b-button>
+      </div>
     </b-form>
     <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ form }}</pre>
@@ -94,4 +96,36 @@ export default {
 </script>
 
 <style>
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  background-color: #05708C;
+  animation: slideIn 0.5s ease;
+  
+}
+
+
+
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons-container b-button {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.m-0 {
+  margin: 0;
+}
 </style>

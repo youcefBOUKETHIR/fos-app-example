@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="title">Add a new Anime</h1>
+    <h1 class="title">Add a new Anime </h1>
     <anime-form></anime-form>
   </div>
 </template>
@@ -13,4 +13,5 @@ export default {
 </script>
   
   <style>
+  
 </style>

@@ -19,6 +19,7 @@ const routes = [
     name: "Anime",
     component: AnimeView,
   },
+  
 ];
 
 const router = new Router({
